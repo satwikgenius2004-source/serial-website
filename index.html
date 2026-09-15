@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SERIAL — Men's Everyday Wear</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Free shipping on orders above ₹999
+    </div>
+
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="desktop-nav">
+                <a href="#shop">Shop</a>
+                <a href="#new">New Arrivals</a>
+                <a href="#collections">Collections</a>
+                <a href="#sale">Sale</a>
+            </nav>
+        </div>
+
+        <a href="#" class="logo">
+            SER<span>IA</span>L
+        </a>
+
+        <div class="header-actions">
+            <button class="icon-btn" id="searchBtn" aria-label="Search">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                </svg>
+            </button>
+
+            <button class="icon-btn account-btn" aria-label="Account">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21c.7-4 3.3-6 8-6s7.3 2 8 6"></path>
+                </svg>
+            </button>
+
+            <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 5h2l1.5 11h11L20 8H7"></path>
+                    <circle cx="10" cy="20" r="1"></circle>
+                    <circle cx="17" cy="20" r="1"></circle>
+                </svg>
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#shop">Shop</a>
+        <a href="#new">New Arrivals</a>
+        <a href="#collections">Collections</a>
+        <a href="#sale">Sale</a>
+    </div>
+
+    <section class="hero">
+
+        <div class="hero-content">
+            <p class="eyebrow">THE NEW EVERYDAY</p>
+
+            <h1>
+                Built for<br>
+                <span>your rotation.</span>
+            </h1>
+
+            <p class="hero-text">
+                Clean fits, everyday essentials and pieces
+                that actually belong in your wardrobe.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#shop" class="btn btn-dark">
+                    Shop Men's
+                </a>
+
+                <a href="#new" class="btn btn-light">
+                    Explore New
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1200&q=85"
+                alt="Men's fashion"
+            >
+
+            <div class="hero-tag">
+                <span>01</span>
+                <strong>EVERYDAY<br>FORM</strong>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="category-strip">
+
+        <div>
+            <span>01</span>
+            <a href="#shop">T-Shirts</a>
+        </div>
+
+        <div>
+            <span>02</span>
+            <a href="#shop">Shirts</a>
+        </div>
+
+        <div>
+            <span>03</span>
+            <a href="#shop">Trousers</a>
+        </div>
+
+        <div>
+            <span>04</span>
+            <a href="#shop">Denim</a>
+        </div>
+
+        <div>
+            <span>05</span>
+            <a href="#shop">Outerwear</a>
+        </div>
+
+    </section>
+
+    <section class="products-section" id="shop">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">SHOP THE EDIT</p>
+                <h2>Most wanted.</h2>
+            </div>
+
+            <a href="#" class="view-all">View all →</a>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-label">BESTSELLER</span>
+
+                    <button class="wishlist" aria-label="Add to wishlist">
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+                        alt="Classic white t-shirt"
+                    >
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Essential Heavy Tee</h3>
+                        <p>Off White</p>
+                    </div>
+
+                    <strong>₹899</strong>
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="Essential Heavy Tee"
+                    data-price="899"
+                >
+                    Add to bag
+                </button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+
+                    <button class="wishlist" aria-label="Add to wishlist">
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=85"
+                        alt="Men's casual shirt"
+                    >
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Relaxed Oxford Shirt</h3>
+                        <p>Sky Blue</p>
+                    </div>
+
+                    <strong>₹1,499</strong>
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="Relaxed Oxford Shirt"
+                    data-price="1499"
+                >
+                    Add to bag
+                </button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+
+                    <span class="product-label">NEW</span>
+
+                    <button class="wishlist" aria-label="Add to wishlist">
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=700&q=85"
+                        alt="Men's trousers"
+                    >
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Straight Fit Trousers</h3>
+                        <p>Charcoal</p>
+                    </div>
+
+                    <strong>₹1,799</strong>
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="Straight Fit Trousers"
+                    data-price="1799"
+                >
+                    Add to bag
+                </button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+
+                    <button class="wishlist" aria-label="Add to wishlist">
+                        ♡
+                    </button>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85"
+                        alt="Men's jacket"
+                    >
+                </div>
+
+                <div class="product-info">
+                    <div>
+                        <h3>Utility Overshirt</h3>
+                        <p>Washed Black</p>
+                    </div>
+
+                    <strong>₹2,199</strong>
+                </div>
+
+                <button
+                    class="add-cart"
+                    data-name="Utility Overshirt"
+                    data-price="2199"
+                >
+                    Add to bag
+                </button>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="new-section" id="new">
+
+        <div class="new-image">
+            <img
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85"
+                alt="New men's collection"
+            >
+        </div>
+
+        <div class="new-content">
+            <p class="eyebrow">NEW ARRIVALS / 26</p>
+
+            <h2>
+                Less noise.<br>
+                Better clothes.
+            </h2>
+
+            <p>
+                A considered collection of relaxed silhouettes,
+                neutral tones and everyday pieces made to work
+                together.
+            </p>
+
+            <a href="#shop" class="text-link">
+                Shop the collection →
+            </a>
+        </div>
+
+    </section>
+
+    <section class="collections" id="collections">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">SERIAL EDITS</p>
+                <h2>Wear it your way.</h2>
+            </div>
+        </div>
+
+        <div class="collection-grid">
+
+            <a href="#" class="collection-card">
+                <img
+                    src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=900&q=85"
+                    alt="Minimal men's fashion"
+                >
+                <div>
+                    <span>01</span>
+                    <h3>Clean<br>Essentials</h3>
+                    <p>Explore →</p>
+                </div>
+            </a>
+
+            <a href="#" class="collection-card">
+                <img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+                    alt="Streetwear collection"
+                >
+                <div>
+                    <span>02</span>
+                    <h3>Off-Duty<br>Uniform</h3>
+                    <p>Explore →</p>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="newsletter">
+
+        <div>
+            <p class="eyebrow">STAY IN THE LOOP</p>
+            <h2>Good clothes.<br>No spam.</h2>
+        </div>
+
+        <form id="newsletterForm">
+            <input
+                type="email"
+                placeholder="Your email address"
+                required
+            >
+
+            <button type="submit">
+                Join →
+            </button>
+        </form>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+            <a href="#" class="footer-logo">SERIAL</a>
+
+            <p>
+                Everyday menswear.<br>
+                Made for real life.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>SHOP</h4>
+            <a href="#">T-Shirts</a>
+            <a href="#">Shirts</a>
+            <a href="#">Trousers</a>
+            <a href="#">Denim</a>
+            <a href="#">Jackets</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>HELP</h4>
+            <a href="#">Contact</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Size Guide</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>SOCIAL</h4>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Facebook</a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 SERIAL</span>
+            <span>Made for everyday.</span>
+        </div>
+
+    </footer>
+
+    <div class="search-overlay" id="searchOverlay">
+
+        <button class="close-search" id="closeSearch">
+            ×
+        </button>
+
+        <div class="search-box">
+            <p>WHAT ARE YOU LOOKING FOR?</p>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search shirts, tees, denim..."
+            >
+
+            <div id="searchResults"></div>
+        </div>
+
+    </div>
+
+    <aside class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <button id="closeCart">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your bag is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <button class="checkout-btn">
+                Continue to checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        <%= product ? product.name : "Product" %> — SERIAL
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body class="product-page">
+
+
+<header class="header">
+
+    <a href="/" class="logo">SERIAL</a>
+
+    <nav class="nav">
+
+        <a href="/shop">Shop</a>
+        <a href="/shop">New Arrivals</a>
+        <a href="/shop">Collections</a>
+        <a href="/shop">Sale</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+        <a href="/login">Account</a>
+
+        <a href="/wishlist">Wishlist</a>
+
+        <a href="/cart">
+            Bag (<span id="cartCount">0</span>)
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="product-detail">
+
+
+<div class="product-gallery">
+
+    <div class="product-thumbnails">
+
+        <img
+            src="<%= product.image %>"
+            alt="<%= product.name %>"
+        >
+
+        <img
+            src="<%= product.image %>"
+            alt="<%= product.name %>"
+        >
+
+        <img
+            src="<%= product.image %>"
+            alt="<%= product.name %>"
+        >
+
+    </div>
+
+
+    <div class="product-main-image">
+
+        <img
+            src="<%= product.image %>"
+            alt="<%= product.name %>"
+        >
+
+        <% if (product.badge) { %>
+
+            <span class="product-badge">
+                <%= product.badge %>
+            </span>
+
+        <% } %>
+
+
+        <button
+            class="product-wishlist"
+            data-name="<%= product.name %>"
+            type="button"
+        >
+            ♡
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="product-details">
+
+    <p class="product-category">
+        SERIAL / <%= product.category %>
+    </p>
+
+
+    <h1>
+        <%= product.name %>
+    </h1>
+
+
+    <p class="product-price">
+        ₹<%= product.price.toLocaleString("en-IN") %>
+    </p>
+
+
+    <p class="product-description">
+
+        A refined everyday essential made from
+        premium fabric. Designed with a relaxed
+        silhouette and clean construction for
+        effortless everyday wear.
+
+    </p>
+
+
+    <div class="product-option">
+
+        <div class="option-heading">
+
+            <strong>Colour</strong>
+
+            <span>Off White</span>
+
+        </div>
+
+
+        <div class="colour-options">
+
+            <button
+                class="colour active"
+                type="button"
+            >
+                Off White
+            </button>
+
+            <button
+                class="colour"
+                type="button"
+            >
+                Black
+            </button>
+
+            <button
+                class="colour"
+                type="button"
+            >
+                Grey
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="product-option">
+
+        <div class="option-heading">
+
+            <strong>Size</strong>
+
+            <a href="#">
+                Size guide
+            </a>
+
+        </div>
+
+
+        <div class="colour-options">
+
+            <button
+                class="size"
+                type="button"
+            >
+                S
+            </button>
+
+            <button
+                class="size active"
+                type="button"
+            >
+                M
+            </button>
+
+            <button
+                class="size"
+                type="button"
+            >
+                L
+            </button>
+
+            <button
+                class="size"
+                type="button"
+            >
+                XL
+            </button>
+
+            <button
+                class="size"
+                type="button"
+            >
+                XXL
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="quantity-row">
+
+        <strong>Quantity</strong>
+
+        <div class="quantity-control">
+
+            <button
+                id="minusQty"
+                type="button"
+            >
+                −
+            </button>
+
+            <input
+                id="quantity"
+                value="1"
+                min="1"
+                readonly
+            >
+
+            <button
+                id="plusQty"
+                type="button"
+            >
+                +
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button
+        id="productAddBtn"
+        class="product-add-btn"
+        data-name="<%= product.name %>"
+        data-price="<%= product.price %>"
+        type="button"
+    >
+        Add to bag
+    </button>
+
+
+    <div class="product-info-list">
+
+        <div>
+            <strong>Delivery</strong>
+            <span>Free delivery over ₹999</span>
+        </div>
+
+        <div>
+            <strong>Returns</strong>
+            <span>Easy 7-day returns</span>
+        </div>
+
+        <div>
+            <strong>Material</strong>
+            <span>Premium everyday fabric</span>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="related-products">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                YOU MAY ALSO LIKE
+            </p>
+
+            <h2>
+                Complete the look.
+            </h2>
+
+        </div>
+
+        <a href="/shop">
+            View all →
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <a href="/" class="logo">SERIAL</a>
+
+        <p>
+            Modern menswear for everyday life.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h4>Shop</h4>
+
+        <a href="/shop">All products</a>
+        <a href="/shop">New arrivals</a>
+
+    </div>
+
+    <div>
+
+        <h4>Account</h4>
+
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+
+    </div>
+
+</footer>
+
+
+<script src="/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop — SERIAL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body class="shop-page">
+
+<div class="top-bar">
+    Free shipping on orders over ₹999
+</div>
+
+
+<header class="header">
+
+    <a href="/" class="logo">SERIAL</a>
+
+    <nav class="nav">
+        <a href="/shop">Shop</a>
+        <a href="/shop">New Arrivals</a>
+        <a href="/shop">Collections</a>
+        <a href="/shop">Sale</a>
+    </nav>
+
+    <div class="header-actions">
+
+        <button id="searchBtn" type="button">⌕</button>
+
+        <a href="/login">Account</a>
+
+        <a href="/wishlist">♡</a>
+
+        <a href="/cart">
+            Bag (<span id="cartCount">0</span>)
+        </a>
+
+        <button id="menuBtn" class="menu-btn" type="button">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<div id="mobileMenu" class="mobile-menu">
+
+    <a href="/shop">Shop</a>
+    <a href="/login">Account</a>
+    <a href="/wishlist">Wishlist</a>
+    <a href="/cart">Cart</a>
+
+</div>
+
+
+<main>
+
+<section class="shop-heading">
+
+    <p class="eyebrow">SERIAL STORE</p>
+
+    <h1>All products.</h1>
+
+    <p>
+        Everyday menswear designed with purpose.
+    </p>
+
+</section>
+
+
+<section class="shop-controls">
+
+    <select id="categoryFilter">
+
+        <option value="All">All categories</option>
+        <option value="T-Shirts">T-Shirts</option>
+        <option value="Shirts">Shirts</option>
+        <option value="Trousers">Trousers</option>
+        <option value="Outerwear">Outerwear</option>
+
+    </select>
+
+
+    <select id="sortProducts">
+
+        <option value="default">
+            Sort by
+        </option>
+
+        <option value="low">
+            Price: Low to High
+        </option>
+
+        <option value="high">
+            Price: High to Low
+        </option>
+
+        <option value="new">
+            Newest
+        </option>
+
+    </select>
+
+</section>
+
+
+<section class="shop-layout">
+
+
+<aside class="shop-filter">
+
+    <div class="filter-group">
+
+        <h4>Category</h4>
+
+        <label class="filter-option">
+            <input
+                type="checkbox"
+                value="T-Shirts"
+            >
+            T-Shirts
+        </label>
+
+        <label class="filter-option">
+            <input
+                type="checkbox"
+                value="Shirts"
+            >
+            Shirts
+        </label>
+
+        <label class="filter-option">
+            <input
+                type="checkbox"
+                value="Trousers"
+            >
+            Trousers
+        </label>
+
+        <label class="filter-option">
+            <input
+                type="checkbox"
+                value="Outerwear"
+            >
+            Outerwear
+        </label>
+
+    </div>
+
+
+    <div class="filter-group">
+
+        <h4>Price</h4>
+
+        <label class="filter-option">
+            <input type="checkbox">
+            Under ₹1,000
+        </label>
+
+        <label class="filter-option">
+            <input type="checkbox">
+            ₹1,000 – ₹2,000
+        </label>
+
+        <label class="filter-option">
+            <input type="checkbox">
+            Above ₹2,000
+        </label>
+
+    </div>
+
+</aside>
+
+
+<div class="shop-products">
+
+    <div class="shop-product-grid">
+
+        <% products.forEach(product => { %>
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="<%= product.image %>"
+                        alt="<%= product.name %>"
+                    >
+
+                    <% if (product.badge) { %>
+
+                        <span class="product-badge">
+                            <%= product.badge %>
+                        </span>
+
+                    <% } %>
+
+
+                    <button
+                        class="wishlist"
+                        data-name="<%= product.name %>"
+                        type="button"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <p>
+                        <%= product.category %>
+                    </p>
+
+                    <h3>
+                        <%= product.name %>
+                    </h3>
+
+                    <span>
+                        ₹<%= product.price.toLocaleString("en-IN") %>
+                    </span>
+
+
+                    <div class="product-actions">
+
+                        <a href="/product/<%= product._id %>">
+                            View product
+                        </a>
+
+                        <button
+                            class="add-cart"
+                            data-name="<%= product.name %>"
+                            data-price="<%= product.price %>"
+                            type="button"
+                        >
+                            Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        <% }) %>
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <a href="/" class="logo">SERIAL</a>
+
+        <p>
+            Modern menswear for everyday life.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h4>Shop</h4>
+
+        <a href="/shop">All products</a>
+        <a href="/shop">New arrivals</a>
+
+    </div>
+
+    <div>
+
+        <h4>Help</h4>
+
+        <a href="/login">Account</a>
+        <a href="/cart">Shipping</a>
+
+    </div>
+
+</footer>
+
+
+<div id="searchOverlay" class="search-overlay">
+
+    <button id="closeSearch" type="button">
+        ×
+    </button>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+        <div id="searchResults"></div>
+
+    </div>
+
+</div>
+
+
+<aside id="cartPanel" class="cart-panel">
+
+    <div class="cart-panel-header">
+
+        <h3>Your bag</h3>
+
+        <button id="closeCart" type="button">
+            ×
+        </button>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-panel-footer">
+
+        <div>
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <a href="/cart" class="btn">
+            View bag
+        </a>
+
+    </div>
+
+</aside>
+
+
+<div id="overlay" class="overlay"></div>
+
+
+<script src="/main.js"></script>
+
+</body>
+</html>

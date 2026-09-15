@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Bag — SERIAL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body class="cart-page">
+
+
+<header class="header">
+
+    <a href="/" class="logo">
+        SERIAL
+    </a>
+
+    <nav class="nav">
+
+        <a href="/shop">Shop</a>
+        <a href="/shop">New Arrivals</a>
+        <a href="/shop">Collections</a>
+        <a href="/shop">Sale</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+        <a href="/login">
+            Account
+        </a>
+
+        <a href="/wishlist">
+            Wishlist
+        </a>
+
+        <a href="/cart">
+            Bag (<span id="cartCount">0</span>)
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="cart-page-heading">
+
+    <p class="eyebrow">
+        YOUR SHOPPING BAG
+    </p>
+
+    <h1>
+        Your bag.
+    </h1>
+
+    <a
+        href="/shop"
+        class="continue-shopping"
+    >
+        ← Continue shopping
+    </a>
+
+</section>
+
+
+<section class="cart-layout">
+
+
+<div
+    class="cart-products"
+    id="cartPageItems"
+>
+
+    <div class="cart-empty-page">
+
+        <h3>
+            Your bag is empty.
+        </h3>
+
+        <p>
+            Add something you love.
+        </p>
+
+        <a href="/shop">
+            Continue shopping →
+        </a>
+
+    </div>
+
+</div>
+
+
+<aside class="cart-summary">
+
+    <h2>
+        Order summary
+    </h2>
+
+
+    <div class="summary-row">
+
+        <span>
+            Subtotal
+        </span>
+
+        <strong id="pageSubtotal">
+            ₹0
+        </strong>
+
+    </div>
+
+
+    <div class="summary-row">
+
+        <span>
+            Shipping
+        </span>
+
+        <strong id="pageShipping">
+            ₹0
+        </strong>
+
+    </div>
+
+
+    <div class="summary-row summary-total">
+
+        <span>
+            Total
+        </span>
+
+        <strong id="pageTotal">
+            ₹0
+        </strong>
+
+    </div>
+
+
+    <p class="summary-note">
+        Free shipping on orders over ₹999.
+    </p>
+
+
+    <button
+        id="checkoutBtn"
+        class="auth-submit"
+        type="button"
+    >
+        Checkout
+    </button>
+
+
+    <div class="secure-payment">
+
+        🔒 Secure checkout
+
+    </div>
+
+</aside>
+
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <a href="/" class="logo">
+            SERIAL
+        </a>
+
+        <p>
+            Modern menswear for everyday life.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h4>Shop</h4>
+
+        <a href="/shop">
+            All products
+        </a>
+
+        <a href="/shop">
+            New arrivals
+        </a>
+
+    </div>
+
+    <div>
+
+        <h4>Account</h4>
+
+        <a href="/login">
+            Login
+        </a>
+
+        <a href="/register">
+            Register
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="/main.js"></script>
+
+</body>
+</html>

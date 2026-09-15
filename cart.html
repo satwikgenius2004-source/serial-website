@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Bag — SERIAL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Free shipping on orders above ₹999
+    </div>
+
+    <header class="header">
+
+        <div class="header-left">
+
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="desktop-nav">
+
+                <a href="shop.html">Shop</a>
+                <a href="index.html#new">New Arrivals</a>
+                <a href="index.html#collections">Collections</a>
+                <a href="#">Sale</a>
+
+            </nav>
+
+        </div>
+
+        <a href="index.html" class="logo">
+            SERIAL
+        </a>
+
+        <div class="header-actions">
+
+            <a href="login.html" class="icon-btn">
+
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21c.7-4 3.3-6 8-6s7.3 2 8 6"></path>
+                </svg>
+
+            </a>
+
+            <a href="cart.html" class="icon-btn cart-btn">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 5h2l1.5 11h11L20 8H7"></path>
+                    <circle cx="10" cy="20" r="1"></circle>
+                    <circle cx="17" cy="20" r="1"></circle>
+                </svg>
+
+                <span id="cartCount">0</span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="cart-page">
+
+        <div class="cart-page-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    SERIAL / BAG
+                </p>
+
+                <h1>
+                    Your bag.
+                </h1>
+
+            </div>
+
+            <a href="shop.html" class="continue-shopping">
+                ← Continue shopping
+            </a>
+
+        </div>
+
+        <div class="cart-layout">
+
+            <section class="cart-products">
+
+                <div id="cartPageItems">
+
+                    <div class="cart-empty-page">
+
+                        <h2>Your bag is empty.</h2>
+
+                        <p>
+                            Looks like you haven't added anything yet.
+                        </p>
+
+                        <a href="shop.html" class="btn btn-dark">
+                            Start shopping
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <aside class="cart-summary">
+
+                <h2>Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="pageSubtotal">₹0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <strong id="pageShipping">₹0</strong>
+                </div>
+
+                <div class="summary-note">
+                    Free shipping on orders above ₹999.
+                </div>
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="pageTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+                <button class="checkout-btn" id="checkoutBtn">
+                    Continue to checkout
+                </button>
+
+                <div class="secure-payment">
+                    Secure checkout · Easy returns
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                SERIAL
+            </a>
+
+            <p>
+                Everyday menswear.<br>
+                Made for real life.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h4>SHOP</h4>
+
+            <a href="shop.html">T-Shirts</a>
+            <a href="shop.html">Shirts</a>
+            <a href="shop.html">Trousers</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h4>HELP</h4>
+
+            <a href="#">Contact</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h4>SOCIAL</h4>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+
+        </div>
+
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
